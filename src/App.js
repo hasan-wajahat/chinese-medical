@@ -1,21 +1,31 @@
 import React from 'react';
+import { Container, makeStyles } from '@material-ui/core';
 import './App.css';
+import TopBar from './components/TopBar';
+import MainTabs from './pages/main-tabs/MainTabs';
+
+const useStyles = makeStyles(() => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    margin: '20px auto',
+  },
+}));
 
 function App() {
+  const [value, setValue] = React.useState(0);
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p> app </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className={classes.root}>
+      <TopBar
+        selected={value}
+        onChange={setValue}
+        position="static"
+      />
+      <MainTabs selectedTab={value} />
+    </Container>
   );
 }
 
