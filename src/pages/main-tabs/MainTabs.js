@@ -7,6 +7,16 @@ const MainTabs = ({ selectedTab }) => (
     {selectedTab === 0 && (
       <TabContainer>
         <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
       </TabContainer>
     )}
     {selectedTab === 1 && (

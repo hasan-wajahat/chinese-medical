@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     background: 'white',
     flexGrow: 1,
     padding: '0 20px',
+    overflowY: 'auto',
   },
 }));
 
