@@ -3,9 +3,9 @@ import React from 'react';
 import { Button, makeStyles, Paper } from '@material-ui/core';
 
 const buttonStyle = {
-  padding: '20px 80px',
+  padding: '10px 80px',
   marginRight: '20px',
-  width: '220px',
+  width: '120px',
 };
 
 const useStyles = makeStyles(() => ({
@@ -33,10 +33,10 @@ const SubmitBar = () => {
   return (
     <Paper className={classes.root}>
       <div className={classes.buttonContainer}>
-        <Button color="green" className={classes.SubmitButton}>
+        <Button className={classes.SubmitButton}>
           Submit
         </Button>
-        <Button color="orange" className={classes.CancelButton}>
+        <Button className={classes.CancelButton}>
           Cancel
         </Button>
       </div>

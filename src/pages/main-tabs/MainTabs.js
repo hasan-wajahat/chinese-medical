@@ -1,23 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import TabContainer from '../../components/TabContainer';
+import Complexion from './Complexion';
 
 const MainTabs = ({ selectedTab }) => (
   <Fragment>
     {selectedTab === 0 && (
-      <TabContainer>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-      </TabContainer>
+      <Complexion />
     )}
     {selectedTab === 1 && (
     <h1>bye</h1>

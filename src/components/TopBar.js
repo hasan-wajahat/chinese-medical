@@ -13,6 +13,8 @@ export default function TopBar({ selected, onChange }) {
         indicatorColor="primary"
         textColor="primary"
         onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="on"
       >
         <Tab label="Complexion" />
         <Tab label="Body Movements" />
