@@ -14,6 +14,7 @@ const SelectInput = ({
   fieldKey,
   options,
   maxWidth,
+  ...remainingProps
 }) => {
   const classes = useStyles();
   return (
@@ -22,6 +23,7 @@ const SelectInput = ({
         value={value}
         onChange={event => onChange(fieldKey, event.target.value)}
         className={classes.baseRoot}
+        {...remainingProps}
       >
         {options.map(option => (
           <MenuItem key={option.value} value={option.value}>

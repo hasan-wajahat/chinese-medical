@@ -8,10 +8,16 @@ const MainTabs = ({ selectedTab }) => (
       <Complexion />
     )}
     {selectedTab === 1 && (
-    <h1>bye</h1>
+      <Complexion />
     )}
     {selectedTab === 2 && (
-    <h1>no</h1>
+      <Complexion />
+    )}
+    {selectedTab === 3 && (
+      <Complexion />
+    )}
+    {selectedTab === 4 && (
+      <Complexion />
     )}
   </Fragment>
 );
