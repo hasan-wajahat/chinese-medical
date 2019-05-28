@@ -6,6 +6,13 @@ import TabContainer from '../../components/TabContainer';
 import QuestionHeading from '../../components/QuestionHeading';
 import SelectInput from '../../components/SelectInput';
 import QuestionRow from './QuestionRow';
+import {
+  getOptions,
+  TONGUE_COLOR_OF_TONGUE,
+  TONGUE_COLOR_OF_TONGUE2,
+  TONGUE_COLOR_OF_TONGUE3,
+  TONGUE_COLOR_OF_TONGUE4,
+} from '../../services/questionData';
 
 const Complexion = ({
   formData,
@@ -21,49 +28,37 @@ const Complexion = ({
       <QuestionHeading heading="Tongue Body" />
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColorOfTongue}
+          value={formData[TONGUE_COLOR_OF_TONGUE]}
           onChange={onChange}
-          fieldKey="tongueColorOfTongue"
-          options={[
-            { label: 'red', value: 'red' },
-            { label: 'orange', value: 'orange' },
-          ]}
+          fieldKey={TONGUE_COLOR_OF_TONGUE}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE)}
           maxWidth={400}
         />
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColorOfTongue2}
+          value={formData[TONGUE_COLOR_OF_TONGUE2]}
           onChange={onChange}
-          fieldKey="tongueColorOfTongue2"
-          options={[
-            { label: 'red', value: 'red' },
-            { label: 'orange', value: 'orange' },
-          ]}
+          fieldKey={TONGUE_COLOR_OF_TONGUE2}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE2)}
           maxWidth={400}
         />
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColorOfTongue3}
+          value={formData[TONGUE_COLOR_OF_TONGUE3]}
           onChange={onChange}
-          fieldKey="tongueColorOfTongue3"
-          options={[
-            { label: 'red', value: 'red' },
-            { label: 'orange', value: 'orange' },
-          ]}
+          fieldKey={TONGUE_COLOR_OF_TONGUE3}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE3)}
           maxWidth={400}
         />
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColorOfTongue4}
+          value={formData[TONGUE_COLOR_OF_TONGUE4]}
           onChange={onChange}
-          fieldKey="tongueColorOfTongue4"
-          options={[
-            { label: 'red', value: 'red' },
-            { label: 'orange', value: 'orange' },
-          ]}
+          fieldKey={TONGUE_COLOR_OF_TONGUE4}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE4)}
           maxWidth={400}
         />
       </QuestionRow>

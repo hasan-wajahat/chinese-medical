@@ -1,4 +1,4 @@
-import { SELECT_PROPERTY } from '../actionTypes';
+import { SELECT_PROPERTY, CLEAR_PROPERTIES } from '../actionTypes';
 
 const INITIAL_STATE = {};
 
@@ -10,6 +10,9 @@ export default function (state = INITIAL_STATE, action) {
         ...state,
         [key]: value,
       };
+    }
+    case CLEAR_PROPERTIES: {
+      return {};
     }
     default:
       return state;
