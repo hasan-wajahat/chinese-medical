@@ -13,7 +13,6 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     minHeight: '100vh',
     maxHeight: '100vh',
-    margin: '20px auto',
   },
 }));
 

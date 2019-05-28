@@ -6,28 +6,26 @@ import Results from './Results';
 import { clearProperties } from '../redux/actions';
 import { getAnswers } from '../services/answers';
 
-const buttonStyle = {
-  padding: '10px 80px',
-  marginRight: '20px',
-  width: '120px',
-  backgroundColor: '#6a6f756b',
-};
-
 const useStyles = makeStyles(() => ({
   root: {
     padding: '20px',
     position: 'sticky',
     bottom: '20px',
+    boxShadow: '0px -2px 5px 0px rgba(0,0,0,0.4)',
   },
   buttonContainer: {
     display: 'flex',
     justifyContent: 'center',
   },
-  SubmitButton: {
-    ...buttonStyle,
-  },
-  CancelButton: {
-    ...buttonStyle,
+  button: {
+    padding: '10px 80px',
+    marginRight: '20px',
+    width: '120px',
+    backgroundColor: '#6a6f756b',
+    '@media (max-width: 960px)': {
+      width: 'unset',
+      padding: '10px 40px',
+    },
   },
 }));
 
@@ -41,17 +39,17 @@ const SubmitBar = ({ properties, clearProperties: resetProperties }) => {
 
   const onCancel = () => {
     resetProperties();
-    setResults(getAnswers({}));
+    setResults([]);
   };
 
   return (
     <Paper className={classes.root}>
       <Results results={results} />
       <div className={classes.buttonContainer}>
-        <Button onClick={onSubmit} className={classes.SubmitButton}>
+        <Button onClick={onSubmit} className={classes.button}>
           Submit
         </Button>
-        <Button onClick={onCancel} className={classes.CancelButton}>
+        <Button onClick={onCancel} className={classes.button}>
           Cancel
         </Button>
       </div>

@@ -33,6 +33,7 @@ const Complexion = ({
           fieldKey={TONGUE_COLOR_OF_TONGUE}
           options={getOptions(TONGUE_COLOR_OF_TONGUE)}
           maxWidth={400}
+          margin="none"
         />
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
@@ -42,6 +43,7 @@ const Complexion = ({
           fieldKey={TONGUE_COLOR_OF_TONGUE2}
           options={getOptions(TONGUE_COLOR_OF_TONGUE2)}
           maxWidth={400}
+          margin="none"
         />
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
@@ -59,6 +61,35 @@ const Complexion = ({
           onChange={onChange}
           fieldKey={TONGUE_COLOR_OF_TONGUE4}
           options={getOptions(TONGUE_COLOR_OF_TONGUE4)}
+          maxWidth={400}
+        />
+      </QuestionRow>
+
+      <QuestionHeading heading="Tongue Coating" />
+      <QuestionRow question="What is the color of your tongue">
+        <SelectInput
+          value={formData[TONGUE_COLOR_OF_TONGUE]}
+          onChange={onChange}
+          fieldKey={TONGUE_COLOR_OF_TONGUE}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE)}
+          maxWidth={400}
+        />
+      </QuestionRow>
+      <QuestionRow question="What is the color of your tongue">
+        <SelectInput
+          value={formData[TONGUE_COLOR_OF_TONGUE]}
+          onChange={onChange}
+          fieldKey={TONGUE_COLOR_OF_TONGUE}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE)}
+          maxWidth={400}
+        />
+      </QuestionRow>
+      <QuestionRow question="What is the color of your tongue">
+        <SelectInput
+          value={formData[TONGUE_COLOR_OF_TONGUE]}
+          onChange={onChange}
+          fieldKey={TONGUE_COLOR_OF_TONGUE}
+          options={getOptions(TONGUE_COLOR_OF_TONGUE)}
           maxWidth={400}
         />
       </QuestionRow>

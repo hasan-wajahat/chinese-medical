@@ -8,6 +8,7 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1,
     padding: '0 20px',
     overflowY: 'auto',
+    marginBottom: '20px',
   },
 }));
 

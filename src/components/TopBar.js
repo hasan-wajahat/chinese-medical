@@ -7,7 +7,7 @@ export default function TopBar({ selected, onChange }) {
     onChange(newValue);
   }
   return (
-    <AppBar position="sticky" color="default">
+    <AppBar style={{ marginTop: '20px' }} position="sticky" color="default">
       <Tabs
         value={selected}
         indicatorColor="primary"
