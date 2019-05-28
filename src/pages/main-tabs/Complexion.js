@@ -42,6 +42,30 @@ const Complexion = ({
           maxWidth={400}
         />
       </QuestionRow>
+      <QuestionRow question="What is the color of your tongue">
+        <SelectInput
+          value={formData.tongueColor3}
+          onChange={onChange}
+          fieldKey="tongueColor3"
+          options={[
+            { label: 'red', value: 'red' },
+            { label: 'orange', value: 'orange' },
+          ]}
+          maxWidth={400}
+        />
+      </QuestionRow>
+      <QuestionRow question="What is the color of your tongue">
+        <SelectInput
+          value={formData.tongueColor4}
+          onChange={onChange}
+          fieldKey="tongueColor4"
+          options={[
+            { label: 'red', value: 'red' },
+            { label: 'orange', value: 'orange' },
+          ]}
+          maxWidth={400}
+        />
+      </QuestionRow>
     </TabContainer>
   );
 };
