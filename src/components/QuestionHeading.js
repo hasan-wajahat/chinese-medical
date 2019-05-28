@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     display: 'inline-block',
     position: 'relative',
 
+    // for underline bar
     '&:after': {
       position: 'absolute',
       content: '""',

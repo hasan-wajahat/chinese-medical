@@ -11,6 +11,10 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+/**
+ * Creates reusable tab container component for
+ * different tabs
+ */
 export default function TabContainer({ children }) {
   const classes = useStyles();
 

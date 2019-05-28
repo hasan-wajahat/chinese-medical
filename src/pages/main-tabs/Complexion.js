@@ -11,6 +11,7 @@ const Complexion = ({
   formData,
   selectProperty: updateProperty,
 }) => {
+  // save the selected property to Store
   const onChange = (key, value) => {
     updateProperty({ key, value });
   };
@@ -20,9 +21,9 @@ const Complexion = ({
       <QuestionHeading heading="Tongue Body" />
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColor}
+          value={formData.tongueColorOfTongue}
           onChange={onChange}
-          fieldKey="tongueColor"
+          fieldKey="tongueColorOfTongue"
           options={[
             { label: 'red', value: 'red' },
             { label: 'orange', value: 'orange' },
@@ -32,9 +33,9 @@ const Complexion = ({
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColor2}
+          value={formData.tongueColorOfTongue2}
           onChange={onChange}
-          fieldKey="tongueColor2"
+          fieldKey="tongueColorOfTongue2"
           options={[
             { label: 'red', value: 'red' },
             { label: 'orange', value: 'orange' },
@@ -44,9 +45,9 @@ const Complexion = ({
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColor3}
+          value={formData.tongueColorOfTongue3}
           onChange={onChange}
-          fieldKey="tongueColor3"
+          fieldKey="tongueColorOfTongue3"
           options={[
             { label: 'red', value: 'red' },
             { label: 'orange', value: 'orange' },
@@ -56,9 +57,9 @@ const Complexion = ({
       </QuestionRow>
       <QuestionRow question="What is the color of your tongue">
         <SelectInput
-          value={formData.tongueColor4}
+          value={formData.tongueColorOfTongue4}
           onChange={onChange}
-          fieldKey="tongueColor4"
+          fieldKey="tongueColorOfTongue4"
           options={[
             { label: 'red', value: 'red' },
             { label: 'orange', value: 'orange' },
@@ -78,6 +79,7 @@ Complexion.propTypes = {
   }).isRequired,
 };
 
+// gets selected properties
 const mapStateToProps = state => ({
   formData: state.properties,
 });

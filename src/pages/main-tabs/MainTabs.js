@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Complexion from './Complexion';
 
+// shows selected tab, as set by top bar
 const MainTabs = ({ selectedTab }) => (
   <Fragment>
     {selectedTab === 0 && (

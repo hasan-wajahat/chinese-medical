@@ -18,6 +18,7 @@ const SelectInput = ({
 }) => {
   const classes = useStyles();
   return (
+    // set maxWidth if passed
     <div style={maxWidth && { maxWidth: `${maxWidth}px` }}>
       <Select
         value={value}
