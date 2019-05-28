@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, makeStyles } from '@material-ui/core';
 import './App.css';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import TopBar from './components/TopBar';
 import MainTabs from './pages/main-tabs/MainTabs';
 import SubmitBar from './components/SubmitBar';
@@ -20,15 +22,17 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root}>
-      <TopBar
-        selected={value}
-        onChange={setValue}
-        position="static"
-      />
-      <MainTabs selectedTab={value} />
-      <SubmitBar />
-    </Container>
+    <Provider store={store}>
+      <Container className={classes.root}>
+        <TopBar
+          selected={value}
+          onChange={setValue}
+          position="static"
+        />
+        <MainTabs selectedTab={value} />
+        <SubmitBar />
+      </Container>
+    </Provider>
   );
 }
 

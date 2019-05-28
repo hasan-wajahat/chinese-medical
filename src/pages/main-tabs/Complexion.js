@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { selectProperty } from '../../redux/actions';
 import TabContainer from '../../components/TabContainer';
 import QuestionHeading from '../../components/QuestionHeading';
 import SelectInput from '../../components/SelectInput';
 import QuestionRow from './QuestionRow';
 
-const Complexion = () => {
-  const [formData, setFormData] = useState({});
+const Complexion = ({
+  formData,
+  selectProperty: updateProperty,
+}) => {
   const onChange = (key, value) => {
-    setFormData({
-      ...formData,
-      [key]: value,
-    });
+    updateProperty({ key, value });
   };
 
   return (
@@ -44,4 +46,19 @@ const Complexion = () => {
   );
 };
 
-export default Complexion;
+Complexion.propTypes = {
+  selectProperty: PropTypes.func.isRequired,
+  formData: PropTypes.shape({
+    key: PropTypes.string,
+    value: PropTypes.any,
+  }).isRequired,
+};
+
+const mapStateToProps = state => ({
+  formData: state.properties,
+});
+
+export default connect(
+  mapStateToProps,
+  { selectProperty },
+)(Complexion);
