@@ -66,7 +66,7 @@ SubmitBar.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  properties: state.properties,
+  properties: state.properties.answers,
 });
 
 export default connect(

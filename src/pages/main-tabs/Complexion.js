@@ -17,10 +17,11 @@ import {
 const Complexion = ({
   formData,
   selectProperty: updateProperty,
+  tabValue,
 }) => {
   // save the selected property to Store
   const onChange = (key, value) => {
-    updateProperty({ key, value });
+    updateProperty({ key, value, tabValue });
   };
 
   return (
@@ -103,11 +104,12 @@ Complexion.propTypes = {
     key: PropTypes.string,
     value: PropTypes.any,
   }).isRequired,
+  tabValue: PropTypes.number.isRequired,
 };
 
 // gets selected properties
 const mapStateToProps = state => ({
-  formData: state.properties,
+  formData: state.properties.answers,
 });
 
 export default connect(

@@ -6,19 +6,19 @@ import Complexion from './Complexion';
 const MainTabs = ({ selectedTab }) => (
   <Fragment>
     {selectedTab === 0 && (
-      <Complexion />
+      <Complexion tabValue={0} />
     )}
     {selectedTab === 1 && (
-      <Complexion />
+      <Complexion tabValue={1} />
     )}
     {selectedTab === 2 && (
-      <Complexion />
+      <Complexion tabValue={2} />
     )}
     {selectedTab === 3 && (
-      <Complexion />
+      <Complexion tabValue={3} />
     )}
     {selectedTab === 4 && (
-      <Complexion />
+      <Complexion tabValue={4} />
     )}
   </Fragment>
 );
